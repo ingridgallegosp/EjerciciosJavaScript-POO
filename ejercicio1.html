@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+
+    <p>Ejercicio 1 - Respuestas en Consola</p>
+    
+    
+    <script>
+
+        // Variable para manipular el número de elementos
+        let numeroDeElementos = 4; 
+
+        // Función para generar la serie Fibonacci
+        const fibonacci = (numeroDeElementos) => {
+            let result = [];
+            if (numeroDeElementos >= 1) {
+                result.push(0);
+            }
+            if (numeroDeElementos >= 2) {
+                result.push(1);
+            }
+            for (var i = 2; i < numeroDeElementos; i++) {
+                result.push(result[i - 1] + result[i - 2]);
+            }
+            return result;
+        }
+
+        // Imprimir la serie Fibonacci en la consola
+        console.log(fibonacci(numeroDeElementos));
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
