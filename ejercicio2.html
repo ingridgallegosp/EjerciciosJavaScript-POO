@@ -6,8 +6,87 @@
     <title>Ejercicio 2</title>
 </head>
 <body>
+    <p>Ejercicio 2 - Respuestas en Consola</p>
+
     <script>
+        // Arreglo de prueba
+        let prueba = ['unacadena', 3, 9, 1, 10, 500, 1, 10, 502, true];
+
+        // Filtrar aquellos elementos que son números y ccrear un nuevo array
+        const filtrarNumeros = (array) => {
+            let numeros = [];
+            
+            for (var i = 0; i < array.length; i++) {
+                if (typeof array[i] === 'number') {
+                    numeros.push(array[i]);
+                }
+            }
+            return numeros;
+        };
+        //console.log(filtrarNumeros(prueba))//ok
         
+        // Ordenar números 
+        /* const ordenarNumeros = (array) =>{
+            
+
+            // Función para encontrar el numero mayor
+            const encontrarMayor = (array) => {
+                let max = array[0];
+                for (let i = 1; i < array.length; i++) {
+                    if (array[i] > max) {
+                        max = array[i];
+                    }
+                }
+                return max;
+            }
+
+            let resultado = [];
+
+            while (array.length > 0) {
+                // Encontrar el máximo elemento en el array
+                let maximo = encontrarMayor(array);
+                // Agregar el máximo elemento al resultado
+                resultado.push(maximo);
+
+                return resultado;
+            }
+        } */
+
+        const ordenarNumeros = (array) => {
+            // Función para encontrar el número mayor
+            const encontrarMayor = (array) => {
+                let max = array[0];
+                for (let i = 1; i < array.length; i++) {
+                    if (array[i] > max) {
+                        max = array[i];
+                    }
+                }
+                return max;
+            };
+
+            let resultado = [];
+
+            while (array.length > 0) {
+                // Encontrar el máximo elemento en el array
+                let maximo = encontrarMayor(array);
+                
+                // Agregar el máximo elemento al resultado
+                resultado.push(maximo);
+                
+                /*no entiendo bien esta parte, me apoye en la IA porqu no me funcionaba*/
+                // Eliminar el máximo elemento del array original
+                let index = array.indexOf(maximo);
+                array.splice(index, 1);
+
+                /**/
+            };
+
+            return resultado; 
+        }
+
+        // Filtrar y ordenar números del arreglo de prueba
+        console.log(ordenarNumeros(filtrarNumeros(prueba)));
+
     </script>
 </body>
 </html>
